@@ -1,0 +1,6 @@
+.card-hover:hover {
+    background-color: rgb(var(--bs-secondary-bg-rgb)); /* Background color on hover */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow properties */
+    cursor: pointer;
+    transition: all 0.25s ease; /* Transition for smooth effect */
+}
