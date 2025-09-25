@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/custom.css">
 </head>
-<body>
+<body onload="initialiseTheme();">
     <!-- Navbar -->
     <nav class="navbar bg-primary sticky-top">
         <div class="container-fluid">
@@ -17,7 +17,7 @@
                 Portfolio
             </span>
             <!-- Light/Dark Theme Switch-->
-            <button class="btn btn-primary bi bi-sun-fill" id="themeSwitch" onclick="toggleTheme()"></button>
+            <button class="btn btn-primary bi" id="themeSwitch" onclick="toggleTheme()"></button>
         </div>
     </nav>
 
@@ -30,7 +30,7 @@
         <div class="offcanvas-body">
             <ul class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action bi bi-house-door-fill" href="../"> Home</a>
-                <a class="list-group-item list-group-item-action list-group-item-secondary bi bi-journal-album fw-semibold" href=""> Portfolio</a>
+                <a class="list-group-item list-group-item-action list-group-item-secondary bi bi-journal-album fw-semibold" href="#"> Portfolio</a>
                 <a class="list-group-item list-group-item-action ps-4 bi bi-arrow-return-right" href="#AboutMe"> About Me</a>
                 <a class="list-group-item list-group-item-action ps-4 bi bi-arrow-return-right" href="#Projects"> Projects</a>
                 <a class="list-group-item list-group-item-action ps-4 bi bi-arrow-return-right" href="#Contact"> Contact</a>
