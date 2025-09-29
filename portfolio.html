@@ -43,17 +43,21 @@
     <div class="m-5 mt-0">
 
         <!-- About Me section -->
-        <h4 class="text-secondary-emphasis border-bottom pt-5" id="AboutMe">About Me</h4>
-        <p class="placeholder-wave ps-4">
-            <span class="placeholder col-7"></span>
-            <span class="placeholder col-4"></span>
-            <span class="placeholder col-4"></span>
-            <span class="placeholder col-6"></span>
-            <span class="placeholder col-8"></span>
-        </p>
+        <div id="AboutMe">
+            <h4 class="text-secondary-emphasis border-bottom pt-5 bi bi-person-vcard"> About Me</h4>
+            <p class="placeholder-wave ps-4">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+            </p>
+        </div>
 
         <!-- Portfolio section -->
-        <h1 class="text-secondary-emphasis border-bottom pt-5" id="Projects">Projects</h1>
+        <div id="Projects">
+            <h1 class="text-secondary-emphasis border-bottom pt-5 bi bi-kanban"> Projects</h1>
+        </div>
 
         <!-- "Page under construction" -->
         <div class="text-center m-5 p-4 border border-5 border-warning bg-dark">
@@ -61,17 +65,51 @@
             <a href="index.html" class="btn btn-outline-warning fw-semibold bi bi-house-door-fill"> Return Home</a>
         </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
         <!-- Contact section -->
-        <h4 class="text-secondary-emphasis border-bottom" id="Contact">Contact</h4>
-        <p class="placeholder-wave ps-4">
-            <span class="placeholder col-7"></span>
-            <span class="placeholder col-4"></span>
-            <span class="placeholder col-4"></span>
-            <span class="placeholder col-6"></span>
-            <span class="placeholder col-8"></span>
-        </p>
+        <div id="Contact">
+            <h4 class="text-secondary-emphasis border-bottom bi bi-envelope-at"> Contact Me</h4>
+            <div class="card bg-light-subtle ms-4" style="max-width: 720px;">
+                <form action="mailto:a00310099+portfolio@student.tus.ie" class="card-body needs-validation" novalidate>
+                    <!-- Email address-->
+                    <!--
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" name="email" required>
+                        <label for="emailInput" class="form-label">E-mail address</label>
+                        <div class="invalid-feedback">
+                            Please enter a valid e-mail address.
+                        </div>
+                    </div>
+                    -->
+
+                    <!-- Subject -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="subjectInput" placeholder="Subject" name="subject" required>
+                        <label for="subjectInput" class="form-label">Subject</label>
+                        <div class="invalid-feedback">
+                            Subject should not be empty.
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Message" id="messageInput" style="height: 150px" name="body" required></textarea>
+                        <label for="messageInput">Message</label>
+                        <div class="invalid-feedback">
+                            Message should not be empty.
+                        </div>
+                    </div>
+                    
+                    <!-- Submit -->
+                    <div class="text-end">
+                        <button type="reset" class="btn btn-outline-danger">Clear</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+                <div class="card-footer text-body-tertiary bi bi-info-circle">
+                    If the form provided doesn't work for you, you can e-mail me at <b>A00310099@student.tus.ie</b>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- end main body -->
