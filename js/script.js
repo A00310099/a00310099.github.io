@@ -73,9 +73,7 @@ function setTheme(theme) {
 function sendEmail() {
     var subjectContent = document.getElementById("subjectInput").value;
     var bodyContent = document.getElementById("messageInput").value;
-    window.location.href = `mailto:a00310099+portfolio@student.tus.ie
-                            ?subject=${encodeURIComponent(subjectContent)}
-                            &body=${encodeURIComponent(bodyContent)}`;
+    window.location.href = `mailto:a00310099+portfolio@student.tus.ie?subject=${encodeURIComponent(subjectContent)}&body=${encodeURIComponent(bodyContent)}`;
 }
 
 function clearEmail() {
