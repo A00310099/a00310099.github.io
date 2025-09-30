@@ -5,9 +5,9 @@ var preferredTheme;
 // Run this on page load
 function initialiseTheme() {
     // Check if user has stored a dark theme preference previously
-    if (localStorage.getItem("preferredTheme") != null) {
+    if (sessionStorage.getItem("preferredTheme") != null) {
         // User has set a dark theme preference, let's use that
-        preferredTheme = localStorage.getItem("preferredTheme");
+        preferredTheme = sessionStorage.getItem("preferredTheme");
         console.log("Setting default theme based on previously set preference");
     } else {
         // User has not yet set dark theme preference, ie. first visit to the site
@@ -19,8 +19,8 @@ function initialiseTheme() {
             preferredTheme = "light";
         }
     }
-    // Store preference in local storage for subsequent visits
-    localStorage.setItem("preferredTheme", preferredTheme);
+    // Store preference in session storage for subsequent visits
+    sessionStorage.setItem("preferredTheme", preferredTheme);
     setTheme(preferredTheme);
 }
 
@@ -45,8 +45,8 @@ function setTheme(theme) {
         themeSwitch.classList.add("bi-sun-fill");
         themeSwitch.classList.remove("bi-moon");
     }
-    // Store current preference in local storage for subsequent visits
-    localStorage.setItem("preferredTheme", theme);
+    // Store current preference in session storage for subsequent visits
+    sessionStorage.setItem("preferredTheme", theme);
 }
 
 // Validation script from https://getbootstrap.com/docs/5.3/forms/validation/
@@ -69,3 +69,19 @@ function setTheme(theme) {
     }, false)
   })
 })()
+
+function sendEmail() {
+    var subjectContent = document.getElementById("subjectInput").value;
+    var bodyContent = document.getElementById("messageInput").value;
+    window.location.href = `mailto:a00310099+portfolio@student.tus.ie
+                            ?subject=${encodeURIComponent(subjectContent)}
+                            &body=${encodeURIComponent(bodyContent)}`;
+}
+
+function clearEmail() {
+    if (confirm("Are you sure you want to clear the form?")) {
+        var emailForm = document.getElementById("emailForm");
+        emailForm.reset();
+        emailForm.classList.remove("was-validated");
+    }
+}

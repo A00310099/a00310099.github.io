@@ -40,11 +40,11 @@
     </div>
 
     <!-- Main Body -->
-    <div class="m-5 mt-0">
+    <div class="m-2 mt-0 m-md-5">
 
         <!-- About Me section -->
-        <div id="AboutMe">
-            <h4 class="text-secondary-emphasis border-bottom pt-5 bi bi-person-vcard"> About Me</h4>
+        <div id="AboutMe" class="pt-5">
+            <h4 class="text-secondary-emphasis border-bottom bi bi-person-vcard"> About Me</h4>
             <p class="placeholder-wave ps-4">
                 <span class="placeholder col-7"></span>
                 <span class="placeholder col-4"></span>
@@ -55,8 +55,8 @@
         </div>
 
         <!-- Portfolio section -->
-        <div id="Projects">
-            <h1 class="text-secondary-emphasis border-bottom pt-5 bi bi-kanban"> Projects</h1>
+        <div id="Projects" class="pt-5">
+            <h1 class="text-secondary-emphasis border-bottom bi bi-kanban"> Projects</h1>
         </div>
 
         <!-- "Page under construction" -->
@@ -66,21 +66,10 @@
         </div>
 
         <!-- Contact section -->
-        <div id="Contact">
+        <div id="Contact" class="pt-5 pb-5">
             <h4 class="text-secondary-emphasis border-bottom bi bi-envelope-at"> Contact Me</h4>
-            <div class="card bg-light-subtle ms-4" style="max-width: 720px;">
-                <form action="mailto:a00310099+portfolio@student.tus.ie" class="card-body needs-validation" novalidate>
-                    <!-- Email address-->
-                    <!--
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="emailInput" placeholder="name@example.com" name="email" required>
-                        <label for="emailInput" class="form-label">E-mail address</label>
-                        <div class="invalid-feedback">
-                            Please enter a valid e-mail address.
-                        </div>
-                    </div>
-                    -->
-
+            <div class="card bg-light-subtle ms-md-4" style="max-width: var(--bs-breakpoint-md);">
+                <form action="javascript:sendEmail()" method="get" class="card-body needs-validation" id="emailForm" novalidate>
                     <!-- Subject -->
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="subjectInput" placeholder="Subject" name="subject" required>
@@ -92,7 +81,7 @@
 
                     <!-- Message -->
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" placeholder="Message" id="messageInput" style="height: 150px" name="body" required></textarea>
+                        <textarea class="form-control" placeholder="Body" id="messageInput" style="height: 150px" name="body" required></textarea>
                         <label for="messageInput">Message</label>
                         <div class="invalid-feedback">
                             Message should not be empty.
@@ -101,7 +90,7 @@
                     
                     <!-- Submit -->
                     <div class="text-end">
-                        <button type="reset" class="btn btn-outline-danger">Clear</button>
+                        <button type="button" onclick="clearEmail()" class="btn btn-outline-danger">Clear</button>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
