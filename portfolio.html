@@ -40,12 +40,13 @@
     </div>
 
     <!-- Main Body -->
-    <div class="m-2 mt-0 m-md-5">
+    <div class="m-2 mt-0 m-md-5 text-center text-md-start">
 
         <!-- About Me section -->
         <div id="AboutMe" class="pt-5">
-            <h4 class="text-secondary-emphasis border-bottom bi bi-person-vcard"> About Me</h4>
-            <p class="placeholder-wave ps-4">
+            <h4 class="border-bottom bi bi-person-vcard"> About Me</h4>
+            <p class="placeholder-wave ps-4 text-body-tertiary">
+                <i>(work in progress)</i>
                 <span class="placeholder col-7"></span>
                 <span class="placeholder col-4"></span>
                 <span class="placeholder col-4"></span>
@@ -56,7 +57,35 @@
 
         <!-- Portfolio section -->
         <div id="Projects" class="pt-5">
-            <h1 class="text-secondary-emphasis border-bottom bi bi-kanban"> Projects</h1>
+            <!-- Title and info -->
+            <h1 class="border-bottom bi bi-kanban"> Projects</h1>
+            <p class="ms-md-4 text-secondary-emphasis">
+                This is what you came here for, the place where you can view all my projects!<br>
+                You can click on one of the cards below to view more details for each project.
+            </p>
+            
+            <!-- Individual projects -->
+            <h5 class="text-secondary-emphasis border-bottom bi bi-person-fill ms-5 me-5 ms-md-0"> Individual projects</h5>
+            <div class="container mb-4">
+                <div class="row g-2">
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="card card-hover" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#templateModal">
+                            <img src="images/placeholder3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Test Project Card</h5>
+                                <p class="card-text">Work-in-progress functionality for displaying projects as modals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group projects -->
+            <h5 class="text-secondary-emphasis border-bottom bi bi-people-fill ms-5 me-5 ms-md-0"> Group projects</h5>
+
+            <!-- Games -->
+            <h5 class="text-secondary-emphasis border-bottom bi bi-joystick ms-5 me-5 ms-md-0"> Games</h5>
+
         </div>
 
         <!-- "Page under construction" -->
@@ -67,7 +96,7 @@
 
         <!-- Contact section -->
         <div id="Contact" class="pt-5 pb-5">
-            <h4 class="text-secondary-emphasis border-bottom bi bi-envelope-at"> Contact Me</h4>
+            <h4 class="border-bottom bi bi-envelope-at"> Contact Me</h4>
             <div class="card bg-light-subtle ms-md-4" style="max-width: var(--bs-breakpoint-md);">
                 <form action="javascript:sendEmail()" method="get" class="card-body needs-validation" id="emailForm" novalidate>
                     <!-- Subject -->
@@ -102,19 +131,56 @@
 
     </div>
     <!-- end main body -->
- 
-    <!-- Testing/WIP functionality -->
-<!--
-    <div class="card card-hover" style="width: 18rem;" onclick="console.log('test')">
-        <div class="card-header">
-            Featured
-        </div>
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <p class="card-text text-start">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+
+    <!-- Modals -->
+    <!-- Template modal-->
+    <div class="modal fade" id="templateModal" tabindex="-1" aria-labelledby="templateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="templateModalLabel">Template Modal Title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/placeholder1.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/placeholder2.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/placeholder3.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/placeholder4.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    Work in progress template modal, content to be filled...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a class="btn btn-primary" href="#" role="button">Link</a>
+                </div>
+            </div>
         </div>
     </div>
--->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
