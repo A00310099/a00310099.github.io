@@ -1,3 +1,8 @@
+:root {
+    --custom-gold: #ffaa00;
+    --custom-gold-rgb: 255, 170, 0;
+}
+
 .card-hover:hover {
     background-color: rgb(var(--bs-secondary-bg-rgb)); /* Background color on hover */
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow properties */
@@ -5,9 +10,20 @@
     transition: all 0.15s ease; /* Transition for smooth effect */
 }
 
+.card-hover-gold:hover {
+    background-color: rgba(var(--custom-gold-rgb), 0.5); /* Background color on hover */
+    box-shadow: 0 0.5rem 1rem rgba(var(--custom-gold-rgb), 0.15); /* Shadow properties */
+    scale: 1.025;
+    cursor: pointer;
+    transition: all 0.15s ease; /* Transition for smooth effect */
+}
+
 /* Tone down the animation to avoid vestibular motion triggers. */
 @media (prefers-reduced-motion: reduce) {
     .card-hover:hover {
+        transition: none;
+    }
+    .card-hover-gold:hover {
         transition: none;
     }
 }
