@@ -2,6 +2,10 @@ const allHtml = document.getElementById("htmlElement");
 const themeSwitch = document.getElementById("themeSwitch");
 var preferredTheme;
 
+// Initialise tooltips (https://getbootstrap.com/docs/5.3/components/tooltips/#overview)
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 // Run this on page load
 function initialiseTheme() {
     // Check if user has stored a dark theme preference previously

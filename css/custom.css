@@ -6,6 +6,7 @@
 .card-hover:hover {
     background-color: rgb(var(--bs-secondary-bg-rgb)); /* Background color on hover */
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow properties */
+    scale: 1.015;
     cursor: pointer;
     transition: all 0.15s ease; /* Transition for smooth effect */
 }
@@ -25,5 +26,15 @@
     }
     .card-hover-gold:hover {
         transition: none;
+    }
+}
+
+/* Display card width differently per desktop and mobile */
+.card-width {
+    width: 16rem;
+}
+@media (max-width: 767.98px) {
+    .card-width {
+        width: 100%;
     }
 }

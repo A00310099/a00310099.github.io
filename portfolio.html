@@ -62,7 +62,7 @@
         </div>
 
         <!-- Portfolio section -->
-        <div id="Projects" class="pt-5">
+        <div id="Projects" class="">
             <!-- Title and info -->
             <h1 class="border-bottom bi bi-kanban"> Projects</h1>
             <p class="ms-md-4 text-secondary-emphasis">
@@ -74,24 +74,24 @@
             <!-- Individual projects -->
             <h5 class="text-secondary-emphasis border-bottom bi bi-person-fill ms-5 me-5"> Individual projects</h5>
             <div class="container mb-4">
-                <div class="row g-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                <div class="row g-2 row-cols-auto">
                     
                     <div class="col">
-                        <div class="card card-hover-gold border-warning" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#templateModal">
+                        <div class="card card-hover-gold border-warning card-width" onclick="constructModal('personalWebsite');">
                             <img src="images/placeholder3.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title "><span class="bi bi-code-slash text-success-emphasis"></span> Test Project Card</h5>
-                                <p class="card-text">Work-in-progress functionality for displaying projects as modals.</p>
+                                <h5 class="card-title"><span class="bi bi-code-slash text-primary-emphasis"></span> Personal Website</h5>
+                                <p class="card-text text-start">The page you are viewing right now!</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card card-hover" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#templateModal">
+                        <div class="card card-hover card-width" onclick="constructModal();">
                             <img src="images/placeholder3.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title "><span class="bi bi-filetype-java text-warning-emphasis"></span> Test Project Card</h5>
-                                <p class="card-text">Work-in-progress functionality for displaying projects as modals.</p>
+                                <h5 class="card-title"><span class="bi bi-filetype-java text-warning-emphasis"></span> Java Practice</h5>
+                                <p class="card-text text-start">Practice project demonstrating my understanding of various java concepts.</p>
                             </div>
                         </div>
                     </div>
@@ -102,24 +102,34 @@
             <!-- Group projects -->
             <h5 class="text-secondary-emphasis border-bottom bi bi-people-fill ms-5 me-5"> Group projects</h5>
             <div class="container mb-4">
-                <div class="row g-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                <div class="row g-2 row-cols-auto">
                     
                     <div class="col">
-                        <div class="card card-hover-gold border-warning" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#templateModal">
+                        <div class="card card-hover-gold border-warning card-width" onclick="constructModal();">
                             <img src="images/placeholder3.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title "><span class="bi bi-database text-danger-emphasis"></span> Test Project Card</h5>
-                                <p class="card-text">Work-in-progress functionality for displaying projects as modals.</p>
+                                <h5 class="card-title"><span class="bi bi-database text-danger-emphasis"></span> Test Project Card</h5>
+                                <p class="card-text text-start">Work-in-progress functionality for displaying projects as modals.</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="col">
-                        <div class="card card-hover" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#templateModal">
+                        <div class="card card-hover card-width" onclick="constructModal();">
                             <img src="images/placeholder3.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><span class="badge text-bg-primary user-select-none">c++</span> Test Project Card</h5>
-                                <p class="card-text">Work-in-progress functionality for displaying projects as modals.</p>
+                                <p class="card-text text-start">Work-in-progress functionality for displaying projects as modals.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-hover card-width" onclick="constructModal();">
+                            <img src="images/placeholder3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><span class="bi bi-terminal text-success-emphasis"></span> Test Project Card</h5>
+                                <p class="card-text text-start">Work-in-progress functionality for displaying projects as modals.</p>
                             </div>
                         </div>
                     </div>
@@ -130,34 +140,34 @@
             <!-- Games -->
             <h5 class="text-secondary-emphasis border-bottom bi bi-joystick ms-5 me-5"> Games</h5>
             <div class="container mb-4">
-                <div class="row g-2 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                <div class="row g-2 row-cols-auto">
                     
                     <div class="col">
-                        <div class="card card-hover-gold border-warning" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#templateModal">
+                        <div class="card card-hover-gold border-warning card-width" onclick="constructModal();">
                             <img src="images/placeholder3.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><span class="bi bi-unity text-light-emphasis"></span> Featured Project Test</h5>
-                                <p class="card-text">Work-in-progress functionality for displaying projects as modals.</p>
+                                <p class="card-text text-start">Work-in-progress functionality for displaying projects as modals.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card card-hover" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#templateModal">
+                        <div class="card card-hover card-width" onclick="constructModal();">
                             <img src="images/placeholder3.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><span class="bi bi-headset-vr text-info-emphasis"></span> Test Project Card</h5>
-                                <p class="card-text">Work-in-progress functionality for displaying projects as modals.</p>
+                                <p class="card-text text-start">Work-in-progress functionality for displaying projects as modals.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
-                        <div class="card card-hover" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#templateModal">
+                        <div class="card card-hover card-width" onclick="constructModal();">
                             <img src="images/placeholder3.png" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><span class="bi bi-unity text-light-emphasis"></span> Test Project Card</h5>
-                                <p class="card-text">Work-in-progress functionality for displaying projects as modals.</p>
+                                <p class="card-text text-start">Work-in-progress functionality for displaying projects as modals.</p>
                             </div>
                         </div>
                     </div>
@@ -206,12 +216,12 @@
     <!-- end main body -->
 
     <!-- Modals -->
-    <!-- Template modal-->
-    <div class="modal fade" id="templateModal" tabindex="-1" aria-labelledby="templateModalLabel" aria-hidden="true">
+    <!-- Project modal-->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="templateModalLabel">Template Modal Title</h1>
+                    <h1 class="modal-title fs-5" id="projectModalLabel">MISSING TITLE</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -220,12 +230,12 @@
                             <!-- Content on the left on desktop, on the top on mobile -->
                             <div class="col-lg col-xl-5">
                                 <!-- Image slideshow -->
-                                <div id="carouselExampleIndicators" class="carousel slide">
+                                <div id="projectModalCarousel" class="carousel slide">
                                     <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
                                     </div>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
@@ -241,11 +251,11 @@
                                             <img src="images/placeholder4.png" class="d-block w-100" alt="...">
                                         </div>
                                     </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Previous</span>
                                     </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <button class="carousel-control-next" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span class="visually-hidden">Next</span>
                                     </button>
@@ -253,16 +263,24 @@
                                 <hr class="d-block d-lg-none">
                             </div>
                             <!-- Content on the right on desktop, on the bottom on mobile -->
-                            <div class="col-lg col-xl-7">
-                                Work in progress template modal, content to be filled...
-                                lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+                            <div class="col-lg col-xl-7" id="projectModalDescription">
+                                Section to be filled by JavaScript. If you are seeing this, then something has gone wrong; please get in touch with me!
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <a class="btn btn-primary bi bi-github disabled" href="https://github.com/A00310099/a00310099.github.io" role="button" target="_blank"> Source Code</a>
+                    
+                    <!-- Button when source code is available -->
+                    <a class="btn btn-primary bi bi-github" id="projectModalSourceCodeLink" href="#" role="button" target="_blank"> Source Code</a>
+
+                    <!-- Button when source code is not available -->
+                    <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-title="Not available" id="projectModalDisabledLink">
+                        <button class="btn btn-primary bi bi-github" type="button" disabled> Source Code</button>
+                    </span>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -270,5 +288,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="js/projectModal.js"></script>
 </body>
 </html>
