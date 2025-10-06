@@ -35,7 +35,7 @@ function constructModal(contentToFill) {
     // TODO: Add code for setting the image carousel
 
     // Enable/disable source code button depending on availability
-    if (sourceCodeLinkElement.getAttribute("href") != "#") {
+    if (sourceCodeLink != "#") {
         sourceCodeLinkElement.setAttribute("href", sourceCodeLink);
         sourceCodeLinkElement.classList.remove("d-none");
         disabledLinkElement.classList.add("d-none");
