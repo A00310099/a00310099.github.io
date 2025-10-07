@@ -42,3 +42,10 @@
 .open-in-new-tab:hover {
     cursor: zoom-in;
 }
+
+.content-fit-16-9 {
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+}

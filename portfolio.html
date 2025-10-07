@@ -80,7 +80,7 @@
                         <div class="card card-hover-gold border-warning card-width" onclick="openProjectModal('personalWebsite');">
                             <img src="images/no_image.png" class="card-img-top" alt="...">
                             <div class="card-body text-start">
-                                <h5 class="card-title" id="title_personalWebsite"><span class="bi bi-code-slash text-primary-emphasis"></span> Personal Website</h5>
+                                <h5 class="card-title" id="title_personalWebsite"><span class="bi bi-code-slash text-primary-emphasis"></span> My Website</h5>
                                 <p class="card-text">The page you are viewing right now!</p>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                             <img src="images/no_image.png" class="card-img-top" alt="...">
                             <div class="card-body text-start">
                                 <h5 class="card-title" id="title_invoiceOCR"><span class="bi bi-database text-danger-emphasis"></span> Invoice OCR</h5>
-                                <p class="card-text">(description pending)</p>
+                                <p class="card-text">Android application for scanning garage invoices, displaying their contents on a web page and generating reports.</p>
                             </div>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                             <img src="images/no_image.png" class="card-img-top" alt="...">
                             <div class="card-body text-start">
                                 <h5 class="card-title" id="title_checkers"><span class="badge text-bg-primary user-select-none">c++</span> Checkers</h5>
-                                <p class="card-text">(description pending)</p>
+                                <p class="card-text">A terminal-based game of checkers, for two players taking turns on the same device.</p>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                             <img src="images/no_image.png" class="card-img-top" alt="...">
                             <div class="card-body text-start">
                                 <h5 class="card-title" id="title_newsagentDB"><span class="bi bi-terminal text-success-emphasis"></span> Newsagent DB</h5>
-                                <p class="card-text">(description pending)</p>
+                                <p class="card-text">Practice working in an Agile team to create a database representing a Newsagent's delivery system.</p>
                             </div>
                         </div>
                     </div>
@@ -147,27 +147,27 @@
                             <img src="images/no_image.png" class="card-img-top" alt="...">
                             <div class="card-body text-start">
                                 <h5 class="card-title" id="title_carPhysics"><span class="bi bi-unity text-light-emphasis"></span> Physics Project</h5>
-                                <p class="card-text">(description pending)</p>
+                                <p class="card-text">2D game where you drive a car through a desert and destroy physics-simulated blocks.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="card card-hover card-width" onclick="openProjectModal('vrEscape');">
-                            <img src="images/no_image.png" class="card-img-top" alt="...">
+                            <img src="images/vr_open_door.png" class="card-img-top" alt="...">
                             <div class="card-body text-start">
                                 <h5 class="card-title" id="title_vrEscape"><span class="bi bi-headset-vr text-info-emphasis"></span> VR Escape Room</h5>
-                                <p class="card-text">(description pending)</p>
+                                <p class="card-text">VR experience where you are trapped in a small room and must figure out a way to escape.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="card card-hover card-width" onclick="openProjectModal('grapplingHook');">
-                            <img src="images/no_image.png" class="card-img-top" alt="...">
+                            <img src="images/gtv_Logo.png" class="card-img-top" alt="...">
                             <div class="card-body text-start">
                                 <h5 class="card-title" id="title_grapplingHook"><span class="bi bi-suit-diamond-fill text-light-emphasis"></span> Grappling the Void</h5>
-                                <p class="card-text">(description pending)</p>
+                                <p class="card-text">Small 3D open world game where you swing yourself using a grappling hook to unlock and scale an ominous tower.</p>
                             </div>
                         </div>
                     </div>
@@ -202,12 +202,12 @@
                     
                     <!-- Submit -->
                     <div class="text-end">
-                        <button type="button" onclick="clearEmail()" class="btn btn-outline-danger">Clear</button>
-                        <button type="submit" class="btn btn-primary">Send</button>
+                        <button type="button" onclick="clearEmail()" class="btn btn-outline-danger bi bi-trash"> Clear</button>
+                        <button type="submit" class="btn btn-primary bi bi-send-fill"> Send</button>
                     </div>
                 </form>
                 <div class="card-footer text-body-tertiary bi bi-info-circle">
-                    If the form provided doesn't work for you, you can e-mail me at <b>A00310099@student.tus.ie</b>
+                    If the form provided doesn't work for you, you can e-mail me at <b class="fw-semibold">A00310099@student.tus.ie</b>
                 </div>
             </div>
         </div>
@@ -215,8 +215,7 @@
     </div>
     <!-- end main body -->
 
-    <!-- Modals -->
-    <!-- Project modal-->
+    <!-- Project modal -->
     <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -224,53 +223,13 @@
                     <h1 class="modal-title fs-5" id="projectModalLabel">MISSING TITLE</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Content on the left on desktop, on the top on mobile -->
-                            <div class="col-lg col-xl-5">
-                                <!-- Image slideshow -->
-                                <div id="projectModalCarousel" class="carousel slide">
-                                    There should be a slideshow here. If you are seeing this, then something has gone wrong; please get in touch with me!
-                                    <!--
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        <button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                    </div>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="images/placeholder1.png" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/placeholder2.png" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/placeholder3.png" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/placeholder4.png" class="d-block w-100" alt="...">
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                    -->
-                                    
-                                </div>
-                                <hr class="d-block d-lg-none">
-                            </div>
-                            <!-- Content on the right on desktop, on the bottom on mobile -->
-                            <div class="col-lg col-xl-7" id="projectModalDescription">
-                                Section to be filled by JavaScript. If you are seeing this, then something has gone wrong; please get in touch with me!
-                            </div>
-                        </div>
+                <div class="modal-body clear-fix">
+                    <div id="projectModalCarousel" class="carousel slide col-lg-6 float-lg-start me-lg-3">
+                        There should be a slideshow here. If you are seeing this, then something has gone wrong; please get in touch with me!
+                    </div>
+                    <hr class="d-block d-lg-none">
+                    <div id="projectModalDescription">
+                        Section to be filled by JavaScript. If you are seeing this, then something has gone wrong; please get in touch with me!
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -283,8 +242,6 @@
                     <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-title="Not available" id="projectModalDisabledLink">
                         <button class="btn btn-primary bi bi-github" type="button" disabled> Source Code</button>
                     </span>
-                    
-                    
                 </div>
             </div>
         </div>

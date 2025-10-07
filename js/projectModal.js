@@ -38,7 +38,7 @@ function setProjectModalVariables(modalId) {
         case "javaPractice":
             modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
-            sourceCodeLink = "#";
+            sourceCodeLink = "https://github.com/A00310099/JavaProject";
             imageSlideshow = [
                 "images/placeholder1.png",
                 "images/placeholder2.png",
@@ -50,7 +50,7 @@ function setProjectModalVariables(modalId) {
         case "invoiceOCR":
             modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
-            sourceCodeLink = "#";
+            sourceCodeLink = "https://github.com/A00310099/Invoice-OCR";
             imageSlideshow = [
                 "images/placeholder1.png",
                 "images/placeholder2.png",
@@ -62,7 +62,7 @@ function setProjectModalVariables(modalId) {
         case "checkers":
             modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
-            sourceCodeLink = "#";
+            sourceCodeLink = "https://github.com/A00310099/CPlusPlus-GroupProject";
             imageSlideshow = [
                 "images/placeholder1.png",
                 "images/placeholder2.png",
@@ -74,7 +74,7 @@ function setProjectModalVariables(modalId) {
         case "newsagentDB":
             modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
-            sourceCodeLink = "#";
+            sourceCodeLink = "https://github.com/A00310099/Delivery-System-Assignment";
             imageSlideshow = [
                 "images/placeholder1.png",
                 "images/placeholder2.png",
@@ -86,7 +86,7 @@ function setProjectModalVariables(modalId) {
         case "carPhysics":
             modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
-            sourceCodeLink = "#";
+            sourceCodeLink = "https://github.com/A00310099/Unity-Physics-Project";
             imageSlideshow = [
                 "images/placeholder1.png",
                 "images/placeholder2.png",
@@ -97,25 +97,25 @@ function setProjectModalVariables(modalId) {
 
         case "vrEscape":
             modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
-            modalDescription = `(description work in progress)`;
-            sourceCodeLink = "#";
+            modalDescription = `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper sit amet risus sit amet venenatis. Quisque ut interdum nisl. Suspendisse in mauris sem. Pellentesque ornare porta turpis. Proin auctor felis ut nisl posuere, eget facilisis arcu hendrerit. Curabitur ac lacus id ipsum elementum ullamcorper eu a ex. Fusce pulvinar porttitor tellus eu lacinia. Etiam tincidunt massa nec turpis feugiat facilisis. Fusce leo leo, vehicula laoreet dignissim a, malesuada sed quam. Donec facilisis, sem ac consectetur suscipit, lacus ipsum aliquet libero, eget dapibus felis mauris ac elit.</p>
+
+<p>Integer eget fermentum massa. In ut diam tortor. Sed ultrices sagittis ante id dictum. Nam pretium nulla ante, eu rhoncus enim blandit vitae. Aenean eu arcu augue. Vestibulum non lacus ac diam malesuada rhoncus in sed odio. Suspendisse dictum ultrices magna, sed molestie diam molestie sed. Sed mattis et nisl ac volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non diam iaculis arcu eleifend venenatis. Duis a imperdiet enim. Aenean ultrices leo congue velit suscipit, ac sodales orci aliquam.</p>`;
+            sourceCodeLink = "https://github.com/A00310099/Unity-VR-App-Dev";
             imageSlideshow = [
-                "images/placeholder1.png",
-                "images/placeholder2.png",
-                "images/placeholder3.png",
-                "images/placeholder4.png",
+                "images/vr_closed_door.png",
+                "images/vr_bookshelf.png",
+                "images/vr_login_screen.png",
+                "images/vr_locked_out.png",
+                "images/vr_open_door.png"
             ];
             break;
 
         case "grapplingHook":
             modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
-            sourceCodeLink = "#";
+            sourceCodeLink = "https://github.com/A00310099/Unity-Open-World-Project";
             imageSlideshow = [
-                "images/placeholder1.png",
-                "images/placeholder2.png",
-                "images/placeholder3.png",
-                "images/placeholder4.png",
+                "images/gtv_Logo.png"
             ];
             break;
 
@@ -136,6 +136,7 @@ function setProjectModalVariables(modalId) {
  * @param {string} modalId The "ID" of the modal to display
  */
 function openProjectModal(modalId) {
+    
     // Set the correct variables
     setProjectModalVariables(modalId);
 
@@ -158,7 +159,7 @@ function openProjectModal(modalId) {
                 </button>`;
 
             carousel += `<div class="${index === 0 ? "carousel-item active" : "carousel-item"}">
-                <a href="${element}" class="open-in-new-tab" target="_blank"><img src="${element}" class="d-block w-100" alt=""></a>
+                <a href="${element}" class="open-in-new-tab" target="_blank"><img src="${element}" class="d-block content-fit-16-9" alt=""></a>
                 </div>`;
         });
 
