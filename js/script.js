@@ -12,11 +12,11 @@ function initialiseTheme() {
     if (sessionStorage.getItem("preferredTheme") != null) {
         // User has set a dark theme preference, let's use that
         preferredTheme = sessionStorage.getItem("preferredTheme");
-        console.log("Setting default theme based on previously set preference");
+        // console.log("Setting default theme based on previously set preference");
     } else {
         // User has not yet set dark theme preference, ie. first visit to the site
         // In that case, let's set a default based on system preference
-        console.log("Setting default theme based on system theme");
+        // console.log("Setting default theme based on system theme");
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             preferredTheme = "dark";
         } else {
@@ -39,12 +39,12 @@ function toggleTheme() {
 // Called by other functions
 function setTheme(theme) {
     if (theme == "dark") {
-        console.log("Theme set to DARK");
+        // console.log("Theme set to DARK");
         allHtml.setAttribute("data-bs-theme", "dark");
         themeSwitch.classList.add("bi-moon");
         themeSwitch.classList.remove("bi-sun-fill");
     } else {
-        console.log("Theme set to LIGHT");
+        // console.log("Theme set to LIGHT");
         allHtml.removeAttribute("data-bs-theme");
         themeSwitch.classList.add("bi-sun-fill");
         themeSwitch.classList.remove("bi-moon");

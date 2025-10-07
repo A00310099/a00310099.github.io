@@ -38,3 +38,7 @@
         width: 100%;
     }
 }
+
+.open-in-new-tab:hover {
+    cursor: zoom-in;
+}
