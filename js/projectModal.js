@@ -1,24 +1,29 @@
-function constructModal(contentToFill) {
-    const noImageAvailable = "images/no_image.png";
+const noImageAvailable = "images/no_image.png";
 
-    // Elements to be changed
-    var modalTitleElement = document.getElementById("projectModalLabel");
-    var modalDescriptionElement = document.getElementById("projectModalDescription");
-    var modalCarouselElement = document.getElementById("projectModalCarousel");
-    var sourceCodeLinkElement = document.getElementById("projectModalSourceCodeLink");
-    var disabledLinkElement = document.getElementById("projectModalDisabledLink");
+// Elements to be changed
+var modalTitleElement = document.getElementById("projectModalLabel");
+var modalDescriptionElement = document.getElementById("projectModalDescription");
+var modalCarouselElement = document.getElementById("projectModalCarousel");
+var sourceCodeLinkElement = document.getElementById("projectModalSourceCodeLink");
+var disabledLinkElement = document.getElementById("projectModalDisabledLink");
 
-    // Variables to be filled
-    var modalTitle;
-    var modalDescription;
-    var sourceCodeLink;
-    var imageSlideshow = []; // Leave as empty array when no images are available
+// Variables to be filled
+var modalTitle;
+var modalDescription;
+var sourceCodeLink;
+var imageSlideshow = []; // Leave as empty array when no images are available
 
-    // Get variables depending on which card was clicked
-    switch(contentToFill) {
+/**
+ * Sets the variables corresponding to the title, description, source code link, and image array of the project modal.
+ * These values are controlled by the switch statement contained in this function.
+ * @param {string} modalId The "ID" of the modal to display
+ */
+function setProjectModalVariables(modalId) {
+    // Set variables depending on which card was clicked
+    switch(modalId) {
         // Personal Website
         case "personalWebsite":
-            modalTitle = document.getElementById("title_personalWebsite").innerHTML;
+            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `This is the website you are currently on.<br>
                 (description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/a00310099.github.io";
@@ -31,7 +36,7 @@ function constructModal(contentToFill) {
             break;
 
         case "javaPractice":
-            modalTitle = document.getElementById("title_javaPractice").innerHTML;
+            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "#";
             imageSlideshow = [
@@ -43,7 +48,7 @@ function constructModal(contentToFill) {
             break;
 
         case "invoiceOCR":
-            modalTitle = document.getElementById("title_invoiceOCR").innerHTML;
+            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "#";
             imageSlideshow = [
@@ -55,7 +60,7 @@ function constructModal(contentToFill) {
             break;
 
         case "checkers":
-            modalTitle = document.getElementById("title_checkers").innerHTML;
+            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "#";
             imageSlideshow = [
@@ -67,7 +72,7 @@ function constructModal(contentToFill) {
             break;
 
         case "newsagentDB":
-            modalTitle = document.getElementById("title_newsagentDB").innerHTML;
+            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "#";
             imageSlideshow = [
@@ -79,7 +84,7 @@ function constructModal(contentToFill) {
             break;
 
         case "carPhysics":
-            modalTitle = document.getElementById("title_carPhysics").innerHTML;
+            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "#";
             imageSlideshow = [
@@ -91,7 +96,7 @@ function constructModal(contentToFill) {
             break;
 
         case "vrEscape":
-            modalTitle = document.getElementById("title_vrEscape").innerHTML;
+            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "#";
             imageSlideshow = [
@@ -103,7 +108,7 @@ function constructModal(contentToFill) {
             break;
 
         case "grapplingHook":
-            modalTitle = document.getElementById("title_grapplingHook").innerHTML;
+            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "#";
             imageSlideshow = [
@@ -123,6 +128,16 @@ function constructModal(contentToFill) {
             imageSlideshow = [];
             break;
     }
+}
+
+/**
+ * Fills the contents of the project template modal based on the desired ID and displays the new modal.
+ * The values are derived from the switch statement in the setProjectModalVariables() function.
+ * @param {string} modalId The "ID" of the modal to display
+ */
+function openProjectModal(modalId) {
+    // Set the correct variables
+    setProjectModalVariables(modalId);
 
     // Fill the title and description of the modal
     modalTitleElement.innerHTML = modalTitle;
@@ -132,21 +147,23 @@ function constructModal(contentToFill) {
     if (imageSlideshow.length === 0) {
         modalCarouselElement.innerHTML = `<img src="${noImageAvailable}" class="d-block w-100" alt="No image available for this project">`;
     } else {
-        // Set the carousel indicators
-        let buttons = `<div class="carousel-indicators">
-            <button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>`;
-        for (let i = 1; i < imageSlideshow.length; i++) {
-            buttons += `<button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="${i}" aria-label="Slide ${i + 1}"></button>`;
-        }
-        buttons += `</div>`;
-
-        // Set the images in the carousel
+        // Opening HTML
+        let buttons = `<div class="carousel-indicators">`;
         let carousel = `<div class="carousel-inner">`;
+        
+        // Inner HTML (dynamic)
         imageSlideshow.forEach((element, index) => {
+            buttons += `<button type="button" data-bs-target="#projectModalCarousel" data-bs-slide-to="${index}"
+                ${index === 0 ? " class='active' aria-current='true' " : " "} aria-label="Slide ${index + 1}">
+                </button>`;
+
             carousel += `<div class="${index === 0 ? "carousel-item active" : "carousel-item"}">
                 <a href="${element}" class="open-in-new-tab" target="_blank"><img src="${element}" class="d-block w-100" alt=""></a>
                 </div>`;
         });
+
+        // Closing HTML
+        buttons += `</div>`;
         carousel += `</div>
             <button class="carousel-control-prev" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -157,7 +174,7 @@ function constructModal(contentToFill) {
                 <span class="visually-hidden">Next</span>
             </button>`;
 
-        // Finally add the carousel to the HTML modal
+        // Add the carousel to the HTML modal
         modalCarouselElement.innerHTML = buttons + carousel;
     }
     
