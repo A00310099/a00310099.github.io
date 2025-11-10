@@ -1,8 +1,10 @@
+/* Custom colours */
 :root {
     --custom-gold: #ffaa00;
     --custom-gold-rgb: 255, 170, 0;
 }
 
+/* Hoverable cards for projects */
 .card-hover:hover {
     background-color: rgb(var(--bs-secondary-bg-rgb)); /* Background color on hover */
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow properties */
@@ -11,6 +13,7 @@
     transition: all 0.15s ease; /* Transition for smooth effect */
 }
 
+/* Hoverable cards for featured projects */
 .card-hover-gold:hover {
     background-color: rgba(var(--custom-gold-rgb), 0.5); /* Background color on hover */
     box-shadow: 0 0.5rem 1rem rgba(var(--custom-gold-rgb), 0.15); /* Shadow properties */
@@ -39,13 +42,29 @@
     }
 }
 
+/* Show a magnifying glass cursor when mousing over */
 .open-in-new-tab:hover {
     cursor: zoom-in;
 }
 
+/* Aspect ratio to keep image carousels consistent*/
 .content-fit-16-9 {
     aspect-ratio: 16/9;
     object-fit: contain;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Custom colours from bootstrap */
+.bs-orange-bg {
+    background-color: var(--bs-orange);
+}
+.bs-indigo-bg {
+    background-color: var(--bs-indigo);
+}
+.bs-purple-bg {
+    background-color: var(--bs-purple);
+}
+.bs-pink-bg {
+    background-color: var(--bs-pink);
 }

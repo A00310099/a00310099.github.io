@@ -19,36 +19,39 @@ var imageSlideshow = []; // Leave as empty array when no images are available
  * @param {string} modalId The "ID" of the modal to display
  */
 function setProjectModalVariables(modalId) {
-    // Set variables depending on which card was clicked
+    // Set the modal title if a valid modal was clicked
+    if (document.getElementById(`title_${modalId}`)) {
+        modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
+    }
+    // Set other variables depending on which card was clicked
     switch(modalId) {
         // Personal Website
         case "personalWebsite":
-            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
-            modalDescription = `This is the website you are currently on.<br>
-                (description work in progress)`;
+            modalDescription = `
+            <p>This is the website you are currently on!</p>
+            <p>Currently, this website's entire purpose is to act as my portfolio, showing off the projects I have worked on throughout my college course, though the groundwork has been laid to potentially add more pages in the future.</p>
+            <p>
+                The website was written in <span class="badge bs-orange-bg text-black">HTML</span> and <span class="badge bg-warning text-black">JS</span>,
+                and styled primarily using <a href="https://getbootstrap.com/" target="_blank" class="badge bs-purple-bg">Bootstrap</a> with some additional custom <span class="badge bs-indigo-bg">CSS</span>.
+            </p>
+            <ol class="list-group list-group-numbered list-group-flush">I chose to create my own website over using an existing template for several reasons:
+                <li class="list-group-item">It's a better example of my skills as a software developer.</li>
+                <li class="list-group-item">It gave me finer control over the exact contents of my website.</li>
+                <li class="list-group-item">It allowed me to practice programming languages I would not have used as much as others in the past.</li>
+            </ol>`;
             sourceCodeLink = "https://github.com/A00310099/a00310099.github.io";
-            imageSlideshow = [
-                "images/placeholder1.png",
-                "images/placeholder2.png",
-                "images/placeholder3.png",
-                "images/placeholder4.png",
-            ];
+            imageSlideshow = [];
             break;
 
+        // Removed project
         case "javaPractice":
-            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
-            modalDescription = `(description work in progress)`;
-            sourceCodeLink = "https://github.com/A00310099/JavaProject";
-            imageSlideshow = [
-                "images/placeholder1.png",
-                "images/placeholder2.png",
-                "images/placeholder3.png",
-                "images/placeholder4.png",
-            ];
+            modalDescription = `The project you are trying to view is not available as it has been removed from this page.`;
+            sourceCodeLink = "#";
+            imageSlideshow = [];
             break;
 
+        // Invoice OCR group project
         case "invoiceOCR":
-            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/Invoice-OCR";
             imageSlideshow = [
@@ -59,8 +62,8 @@ function setProjectModalVariables(modalId) {
             ];
             break;
 
+        // C++ Checkers group project
         case "checkers":
-            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/CPlusPlus-GroupProject";
             imageSlideshow = [
@@ -71,8 +74,8 @@ function setProjectModalVariables(modalId) {
             ];
             break;
 
+        // Agile practice group project
         case "newsagentDB":
-            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/Delivery-System-Assignment";
             imageSlideshow = [
@@ -83,8 +86,8 @@ function setProjectModalVariables(modalId) {
             ];
             break;
 
+        // Unity physics project
         case "carPhysics":
-            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/Unity-Physics-Project";
             imageSlideshow = [
@@ -95,11 +98,9 @@ function setProjectModalVariables(modalId) {
             ];
             break;
 
+        // VR escape room
         case "vrEscape":
-            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
-            modalDescription = `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper sit amet risus sit amet venenatis. Quisque ut interdum nisl. Suspendisse in mauris sem. Pellentesque ornare porta turpis. Proin auctor felis ut nisl posuere, eget facilisis arcu hendrerit. Curabitur ac lacus id ipsum elementum ullamcorper eu a ex. Fusce pulvinar porttitor tellus eu lacinia. Etiam tincidunt massa nec turpis feugiat facilisis. Fusce leo leo, vehicula laoreet dignissim a, malesuada sed quam. Donec facilisis, sem ac consectetur suscipit, lacus ipsum aliquet libero, eget dapibus felis mauris ac elit.</p>
-
-<p>Integer eget fermentum massa. In ut diam tortor. Sed ultrices sagittis ante id dictum. Nam pretium nulla ante, eu rhoncus enim blandit vitae. Aenean eu arcu augue. Vestibulum non lacus ac diam malesuada rhoncus in sed odio. Suspendisse dictum ultrices magna, sed molestie diam molestie sed. Sed mattis et nisl ac volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non diam iaculis arcu eleifend venenatis. Duis a imperdiet enim. Aenean ultrices leo congue velit suscipit, ac sodales orci aliquam.</p>`;
+            modalDescription = `(description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/Unity-VR-App-Dev";
             imageSlideshow = [
                 "images/vr_closed_door.png",
@@ -110,8 +111,8 @@ function setProjectModalVariables(modalId) {
             ];
             break;
 
+        // Unity open world project (grappling hook game)
         case "grapplingHook":
-            modalTitle = document.getElementById(`title_${modalId}`).innerHTML;
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/Unity-Open-World-Project";
             imageSlideshow = [
