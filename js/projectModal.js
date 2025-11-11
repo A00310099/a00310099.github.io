@@ -50,6 +50,20 @@ function setProjectModalVariables(modalId) {
             imageSlideshow = [];
             break;
 
+        // JDBC animals
+        case "jdbc":
+            modalDescription = `(description work in progress)`;
+            sourceCodeLink = "#";
+            imageSlideshow = [
+                "images/jdbc_animals.png",
+                "images/jdbc_enclosures.png",
+                "images/jdbc_feeding.png",
+                "images/jdbc_merged.png",
+                "images/jdbc_merged_min.png",
+                "images/jdbc_audit.png",
+            ];
+            break;
+
         // Invoice OCR group project
         case "invoiceOCR":
             modalDescription = `(description work in progress)`;
@@ -150,7 +164,7 @@ function openProjectModal(modalId) {
         modalCarouselElement.innerHTML = `<img src="${noImageAvailable}" class="d-block w-100" alt="No image available for this project">`;
     } else {
         // Opening HTML
-        let buttons = `<div class="carousel-indicators">`;
+        let buttons = `<div class="carousel-indicators badge indicator-bg">`;
         let carousel = `<div class="carousel-inner">`;
         
         // Inner HTML (dynamic)
@@ -168,16 +182,19 @@ function openProjectModal(modalId) {
         buttons += `</div>`;
         carousel += `</div>
             <button class="carousel-control-prev" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="carousel-control-prev-icon indicator-bg rounded-pill" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-next-icon indicator-bg rounded-pill" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>`;
 
         // Add the carousel to the HTML modal
         modalCarouselElement.innerHTML = buttons + carousel;
+
+        // Fixes indicator buttons
+        new bootstrap.Carousel(document.querySelector('#projectModalCarousel'))
     }
     
     // Enable/disable source code button depending on availability

@@ -52,7 +52,11 @@
     aspect-ratio: 16/9;
     object-fit: contain;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgb(var(--bs-tertiary-bg-rgb));
+}
+
+.indicator-bg {
+    background-color: rgba(var(--bs-secondary-rgb), 0.5);
 }
 
 /* Custom colours from bootstrap */

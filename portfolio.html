@@ -43,44 +43,46 @@
     <div class="m-2 mt-0 m-md-5 text-center text-md-start">
 
         <!-- "Page under construction" -->
+        <!--
         <div class="text-center m-5 p-4 border border-5 border-warning bg-dark">
             <h2 class="text-warning"><i class="bi bi-cone-striped"></i> This page is under construction <i class="bi bi-cone-striped"></i></h2>
             <a href="index.html" class="btn btn-outline-warning fw-semibold bi bi-house-door-fill"> Return Home</a>
         </div>
+        -->
 
         <!-- About Me section -->
         <div id="AboutMe" class="pt-5">
             <h4 class="border-bottom bi bi-person-vcard"> About Me</h4>
-            <p class="text-start">
+            <p class="ms-md-4 text-start">
                 Hello and welcome to my web page! I'm a college student currently studying Software Design and hoping to work on software in the future.
                 This page contains all the projects demonstrating my abilities as a developer, both individually and in a group.
             </p>
-            <p class="text-start">
+            <p class="ms-md-4 text-start">
                 I have knowledge in a wide range of programming languages:
             </p>
-            <div class="container row" style="min-height: 4em;">
-                <div class="col-2">
-                    <div class="carousel slide" style="height: 100%;" role="button" data-bs-ride="carousel" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            <div class="container row ms-md-4" style="min-height: 4em;">
+                <div class="col-md-2 col-3">
+                    <div class="carousel slide card bg-body-secondary d-flex justify-content-center" style="height: 100%;" role="button" data-bs-ride="carousel" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
                         <div class="carousel-inner text-center">
-                            <div class="carousel-item active" data-bs-interval="1000">
+                            <div class="carousel-item active" data-bs-interval="1500">
                                 <span class="badge bg-danger">Java</span>
                             </div>
-                            <div class="carousel-item" data-bs-interval="1000">
+                            <div class="carousel-item" data-bs-interval="1500">
                                 <span class="badge bs-orange-bg">C#</span>
                             </div>
-                            <div class="carousel-item" data-bs-interval="1000">
+                            <div class="carousel-item" data-bs-interval="1500">
                                 <span class="badge bg-warning">C++</span>
                             </div>
-                            <div class="carousel-item" data-bs-interval="1000">
+                            <div class="carousel-item" data-bs-interval="1500">
                                 <span class="badge bg-success">MySQL</span>
                             </div>
-                            <div class="carousel-item" data-bs-interval="1000">
+                            <div class="carousel-item" data-bs-interval="1500">
                                 <span class="badge bg-primary">HTML</span>
                             </div>
-                            <div class="carousel-item" data-bs-interval="1000">
+                            <div class="carousel-item" data-bs-interval="1500">
                                 <span class="badge bs-purple-bg">JavaScript</span>
                             </div>
-                            <div class="carousel-item" data-bs-interval="1000">
+                            <div class="carousel-item" data-bs-interval="1500">
                                 <span class="badge bs-pink-bg">CSS</span>
                             </div>
                         </div>
@@ -89,15 +91,19 @@
                 <div class="col-auto">
                     <div >
                         <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                            <div class="card card-body" style="min-width: max-content;">
+                            <div class="card card-body bg-body-tertiary" style="min-width: max-content;">
                                 Java, C#, C++, MySQL, HTML, JavaScript, CSS
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <p>
-                ...
+            <p class="mt-3 ms-md-4 text-start">
+                In addition, I've dabbled in Python and Kotlin, though I would still need some practice with them before I'd consider myself confident with them.
+                However, I believe one of my strengths to be that I can pick up on new knowledge quite quickly.
+            </p>
+            <p class="ms-md-4 text-start">
+                I am comfortable using both <span class="bi bi-tux fw-semibold"> Linux</span> and <span class="bi bi-windows fw-semibold"> Windows</span> for development and for day-to-day use.
             </p>
         </div>
 
@@ -105,7 +111,7 @@
         <div id="Projects">
             <!-- Title and info -->
             <h1 class="border-bottom bi bi-kanban"> Projects</h1>
-            <p class="ms-md-4 text-secondary-emphasis text-start">
+            <p class="ms-md-4 text-start">
                 <!-- This is what you came here for, the place where you can view all my projects!<br> -->
                 You can click on one of the cards below to view more details for each project.<br>
                 Projects with gold borders are featured projects; they are the work I am most proud of. If you don't have the time to check everything, I recommend at least starting with those.
@@ -136,6 +142,15 @@
                         </div>
                     </div>
                     -->
+                    <div class="col">
+                        <div class="card card-hover card-width" onclick="openProjectModal('jdbc');">
+                            <img src="images/jdbc_merged_min.png" class="card-img-top" alt="...">
+                            <div class="card-body text-start">
+                                <h5 class="card-title" id="title_jdbc"><span class="bi bi-filetype-sql text-warning-emphasis"></span> MAM's</h5>
+                                <p class="card-text">Many Animals Management system: a database for managing animal enclosures</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
