@@ -34,10 +34,10 @@ function setProjectModalVariables(modalId) {
                 The website was written in <span class="badge bs-orange-bg text-black">HTML</span> and <span class="badge bg-warning text-black">JS</span>,
                 and styled primarily using <a href="https://getbootstrap.com/" target="_blank" class="badge bs-purple-bg">Bootstrap</a> with some additional custom <span class="badge bs-indigo-bg">CSS</span>.
             </p>
-            <ol class="list-group list-group-numbered list-group-flush">I chose to create my own website over using an existing template for several reasons:
-                <li class="list-group-item">It's a better example of my skills as a software developer.</li>
-                <li class="list-group-item">It gave me finer control over the exact contents of my website.</li>
-                <li class="list-group-item">It allowed me to practice programming languages I would not have used as much as others in the past.</li>
+            <ol class="list-group list-group-flush">I chose to create my own website over using an existing template for several reasons:
+                <li class="list-group-item"><i class="bi bi-git"> </i>It's a better example of my skills as a software developer.</li>
+                <li class="list-group-item"><i class="bi bi-wrench-adjustable"> </i>It gave me finer control over the exact contents of my website.</li>
+                <li class="list-group-item"><i class="bi bi-code-slash"> </i>It allowed me to practice programming languages I would not have used as much as others in the past.</li>
             </ol>`;
             sourceCodeLink = "https://github.com/A00310099/a00310099.github.io";
             imageSlideshow = [];
@@ -52,8 +52,20 @@ function setProjectModalVariables(modalId) {
 
         // JDBC animals
         case "jdbc":
-            modalDescription = `(description work in progress)`;
-            sourceCodeLink = "#";
+            modalDescription = `<p>The Many Animals Management system (MAM's for short) is a GUI for a database. As the name suggests, it is most useful where you're managing many animals at once, for example at a farm or a zoo.</p>
+            <p>    
+                It allows you to perform CRUD operations on tables for Animals, Enclosures, and Feeding Times.
+                In addition, it contains a Merged View table combining the three tables, as well as an Audit Log for viewing actions taken on the database.
+            </p>
+            <ol class="list-group list-group-flush">Some additional features include:
+                <li class="list-group-item"><i class="bi bi-check2-square"> </i>A toggle for displaying IDs in the tables, whether you just prefer a concise overview or if you want to perform administrative actions on the database.</li>
+                <li class="list-group-item"><i class="bi bi-file-earmark-spreadsheet"> </i>Exports for each table, into <span class="badge bg-secondary">.csv</span> format, in case you want to do further work with the data as a spreadsheet.</li>
+                <li class="list-group-item"><i class="bi bi-table"> </i>Additional exports to generate some useful information, like a list of all the animals or the most populated enclosures.</li>
+            </ol>
+            <p>
+                The database uses <span class="badge bs-pink-bg">MySQL</span> for the backend, and <span class="badge bg-danger">Java</span> with JFrame for the UI.
+            </p>`;
+            sourceCodeLink = "https://github.com/A00310099/MAMsDB";
             imageSlideshow = [
                 "images/jdbc_animals.png",
                 "images/jdbc_enclosures.png",
@@ -66,7 +78,30 @@ function setProjectModalVariables(modalId) {
 
         // Invoice OCR group project
         case "invoiceOCR":
-            modalDescription = `(description work in progress)`;
+            modalDescription = `<p>This project was done as an internal work placement for ScaleTech. I was the lead programmer responsible for ensuring everything works together.</p>
+            <ol class="list-group list-group-flush">A garage owner can follow these steps:
+                <li class="list-group-item"><i class="bi bi-android"> </i>The user scans a garage invoice using our <span class="text-success-emphasis"> Android app</span> powered by <span class="bi bi-google">oogle Vision</span>.</li>
+                <li class="list-group-item"><i class="bi bi-cloud-upload""> </i>The user then uploads the scanned text to our Java server, running on Apache Tomcat.</li>
+                <li class="list-group-item"><i class="bi bi-database"> </i>Uploaded text is parsed in the background and put into a MySQL Database.</li>
+                <li class="list-group-item"><i class="bi bi-browser-firefox"> </i>The user can now view a collection of all scanned invoices in a table on the web page, using their browser of choice.</li>
+            </ol>
+            <p>
+                <i class="bi bi-pencil-square"> </i>
+                Information in the table can be modified in case the scanner made a mistake, or deleted when no longer necessary.
+                The user can search through the table using any combination of the table's headings, so they can easily find any specific invoice.
+            </p> 
+            <p>
+                <i class="bi bi-file-earmark-pdf"> </i>
+                Both the entire table and individual invoices can be converted into a <span class="badge bg-secondary">.pdf</span> format.
+                Even the current search results can be saved this way, allowing for very flexible record-keeping, for example to create a copy of a list of all paid or unpaid invoices.
+                Every exported file is automatically dated to when it was requested, allowing a snapshot of your data at any given time.
+            </p>
+            <p>
+                <i class="bi bi-bar-chart-line"> </i>
+                On the next web page, some information from the table can also be visualised into charts with the help of <span class="badge bs-orange-bg">D3.js</span> such as a graph of the invoices paid/part paid/not paid.
+                This page also includes some other useful and specific information, including the total number and € amount of all invoices, and some additional information per customer and per car.
+                Like the tables, the information on this page can also be exported into <span class="badge bg-secondary">.pdf</span>s.
+            </p>`;
             sourceCodeLink = "https://github.com/A00310099/Invoice-OCR";
             imageSlideshow = [
                 "images/placeholder1.png",
