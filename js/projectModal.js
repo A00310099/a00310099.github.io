@@ -40,7 +40,11 @@ function setProjectModalVariables(modalId) {
                 <li class="list-group-item"><i class="bi bi-code-slash"> </i>It allowed me to practice programming languages I would not have used as much as others in the past.</li>
             </ol>`;
             sourceCodeLink = "https://github.com/A00310099/a00310099.github.io";
-            imageSlideshow = [];
+            imageSlideshow = [
+                "images/portfolio/light_theme.png",
+                "images/portfolio/dark_theme.png",
+                "images/portfolio/links.png"
+            ];
             break;
 
         // Removed project
@@ -67,12 +71,12 @@ function setProjectModalVariables(modalId) {
             </p>`;
             sourceCodeLink = "https://github.com/A00310099/MAMsDB";
             imageSlideshow = [
-                "images/jdbc_animals.png",
-                "images/jdbc_enclosures.png",
-                "images/jdbc_feeding.png",
-                "images/jdbc_merged.png",
-                "images/jdbc_merged_min.png",
-                "images/jdbc_audit.png",
+                "images/jdbc/animals.png",
+                "images/jdbc/enclosures.png",
+                "images/jdbc/feeding.png",
+                "images/jdbc/merged.png",
+                "images/jdbc/merged_min.png",
+                "images/jdbc/audit.png",
             ];
             break;
 
@@ -104,10 +108,10 @@ function setProjectModalVariables(modalId) {
             </p>`;
             sourceCodeLink = "https://github.com/A00310099/Invoice-OCR";
             imageSlideshow = [
-                "images/placeholder1.png",
-                "images/placeholder2.png",
-                "images/placeholder3.png",
-                "images/placeholder4.png",
+                "images/ocr/app.png",
+                "images/ocr/table.png",
+                "images/ocr/stats.png",
+                "images/ocr/invoice.png"
             ];
             break;
 
@@ -116,23 +120,16 @@ function setProjectModalVariables(modalId) {
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/CPlusPlus-GroupProject";
             imageSlideshow = [
-                "images/placeholder1.png",
-                "images/placeholder2.png",
-                "images/placeholder3.png",
-                "images/placeholder4.png",
+                "images/checkers/start.png",
+                "images/checkers/capture.png"
             ];
             break;
 
-        // Agile practice group project
+        // (removed) Agile practice group project
         case "newsagentDB":
-            modalDescription = `(description work in progress)`;
-            sourceCodeLink = "https://github.com/A00310099/Delivery-System-Assignment";
-            imageSlideshow = [
-                "images/placeholder1.png",
-                "images/placeholder2.png",
-                "images/placeholder3.png",
-                "images/placeholder4.png",
-            ];
+            modalDescription = `The project you are trying to view is not available as it has been removed from this page.`;
+            sourceCodeLink = "#";
+            imageSlideshow = [];
             break;
 
         // Unity physics project
@@ -140,10 +137,21 @@ function setProjectModalVariables(modalId) {
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/Unity-Physics-Project";
             imageSlideshow = [
-                "images/placeholder1.png",
-                "images/placeholder2.png",
-                "images/placeholder3.png",
-                "images/placeholder4.png",
+                "images/car/start.png",
+                "images/car/firing.png",
+                "images/car/destruction.png",
+                "images/car/sandstorm.png",
+                "images/car/city_approach.png",
+                "images/car/houses.png",
+                "images/car/plinko.png",
+                "images/car/plinko_prize.png",
+                "images/car/boss_approach.png",
+                "images/car/boss.png",
+                "images/car/boss_right.png",
+                "images/car/boss_damaged.png",
+                "images/car/boss_rage.png",
+                "images/car/victory.png",
+                "images/car/ending.png"
             ];
             break;
 
@@ -152,11 +160,11 @@ function setProjectModalVariables(modalId) {
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/Unity-VR-App-Dev";
             imageSlideshow = [
-                "images/vr_closed_door.png",
-                "images/vr_bookshelf.png",
-                "images/vr_login_screen.png",
-                "images/vr_locked_out.png",
-                "images/vr_open_door.png"
+                "images/vr/closed_door.png",
+                "images/vr/bookshelf.png",
+                "images/vr/login_screen.png",
+                "images/vr/locked_out.png",
+                "images/vr/open_door.png"
             ];
             break;
 
@@ -165,7 +173,19 @@ function setProjectModalVariables(modalId) {
             modalDescription = `(description work in progress)`;
             sourceCodeLink = "https://github.com/A00310099/Unity-Open-World-Project";
             imageSlideshow = [
-                "images/gtv_Logo.png"
+                "images/gtv/hook.png",
+                "images/gtv/grapple.png",
+                "images/gtv/tower_distant.png",
+                "images/gtv/red_text.png",
+                "images/gtv/green_text.png",
+                "images/gtv/blue_text.png",
+                "images/gtv/tower_beams.png",
+                "images/gtv/tower_door.png",
+                "images/gtv/tower_inside.png",
+                "images/gtv/tower_ascent_text.png",
+                "images/gtv/tower_fall.png",
+                "images/gtv/tower_exit.png",
+                "images/gtv/end.png"
             ];
             break;
 
